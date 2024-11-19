@@ -1,0 +1,22 @@
+1. Metoda Honeypot, podstawienie ukrytego pola formularza które boty będą targetować - w przypadku prostych botów powinno pomóc,
+2. Blokowanie wysyłki formularza jeśli zostanie on wypełniony za szybko - działa dobrze na szybkie boty, ale nie sprawdzi sie w przypadku tych symulujących naturalne opóźnienia,
+3. Blokada nietypowych User-Agentów - skuteczne wobec prymitywnych botów, ale łatwe do obejścia przez zaawansowane ataki,
+4. Odpowiedź na losowe, proste pytanie przed wysyłką - skuteczne natomiast trzeba stosować to z rozwagą bo może zniechęcić prawdziwych użytkowników,
+5. CloudFlare Turnstile - skuteczne rozwiązanie, powinno być dobrą alternatywną dla reCaptcha,
+6. Aplikacja formularza typu double opt-in - skuteczne rozwiązanie, natomiast nie najlepsze UX'owo ponieważ wydłuża proces rejestracji,
+7. Walidacja adresów danych typu real-time np. za pośrednictwem Clearout.io - skuteczne ale generuje dodatkowe koszta i wymaga dodatkowej integracji z usługą
+
+W zależności od wpływu na UX, kosztów implementacji i skuteczności można te rozwiązania różnie skategoryzować:
+
+W skali od 1 - 5 wg skuteczności, gdzie 1 to słabo, a 5 bardzo dobrze
+
+Honeypot, Blokada nietypowych User-Agentów - 3
+Blokowanie za szybkie wypełnienie, Odpowiedź na proste pytanie - 4
+CloudFlare Turnstile, Double opt-in, Real-time walidacja danych - 5
+
+W skali od 1 - 5 wg łatwości wdrożenia oraz kosztów, 1 to trudno i drogo, 5 to tanio i łatwo
+
+Honeypot, Blokada nietypowych User-Agentów - 5
+Blokowanie za szybkie wypełnienie, Odpowiedź na proste pytanie - 4
+CloudFlare Turnstile, Double opt-in, Real-time walidacja danych - 3
+

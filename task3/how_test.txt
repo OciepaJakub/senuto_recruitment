@@ -1,0 +1,7 @@
+Uruchomienie aplikacji: go run main.go
+
+Przykładowy request:
+
+curl -X POST http://localhost:8080/submit \
+-H "Content-Type: application/json" \
+-d '{"email": "ocjakub@gmail.com", "password": "Password!1", "first_name": "Jakub", "last_name": "Ociepa"}'
